@@ -7,6 +7,7 @@ import numpy as np
 import gspread
 from plotly.subplots import make_subplots
 
+
 # Setting page layout to wide
 
 st.set_page_config(layout="wide")
@@ -53,10 +54,6 @@ if filter == "All":
 else:
     df = df[df['state'] == filter]
 
-# Header and Subheader
-
-st.header("Financial Consumer Complaints")
-st.subheader(f"Displaying Data for {filter} State")
 
 # Metrics
 Complaints = df['Count of Complaints'].sum()
@@ -89,6 +86,20 @@ tree_data = tree_data.reset_index()
 
 
 # Making UI
+
+with st.container():
+    # Header and Subheader
+    col1, col2 = st.columns((1,15))
+
+    with col1.container():
+        st.image("/Users/kazmi/Stuff/Karachi_ai/CDE/Streamlit/complain.png")
+
+    with col2.container():
+        st.header("Financial Consumer Complaints")
+
+
+st.subheader(f"Displaying Data for {filter} State")
+
 
 with st.container():
 
