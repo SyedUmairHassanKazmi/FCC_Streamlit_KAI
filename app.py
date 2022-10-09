@@ -92,7 +92,7 @@ with st.container():
     col1, col2 = st.columns((1,15))
 
     with col1.container():
-        st.image("/Users/kazmi/Stuff/Karachi_ai/CDE/Streamlit/complain.png")
+        st.image("complain.png")
 
     with col2.container():
         st.header("Financial Consumer Complaints")
