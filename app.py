@@ -195,6 +195,7 @@ with st.container():
         figtree = px.treemap(tree_data, path=['issue', 'sub_issue'], values='Count of Complaints',
                   color= 'Count of Complaints',
                   color_continuous_scale='plasma',
+                  title = "Complaints by Issue and Sub-Issue"
                   )
         figtree.update_coloraxes(showscale=False)
         st.plotly_chart(figtree, use_container_width=True) 
